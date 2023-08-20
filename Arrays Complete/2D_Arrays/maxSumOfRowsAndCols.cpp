@@ -1,8 +1,9 @@
 #include<iostream>
 using namespace std;
 
-void rowWise(int arr[][4], int n, int m){
+int rowWise(int arr[][4], int n, int m){
     int max = -1;
+    int maxIndex = 0;
     for(int i=0; i<n; i++){
         int sum = 0;
         for(int j=0; j<m; j++){
@@ -10,22 +11,29 @@ void rowWise(int arr[][4], int n, int m){
         }
         if(sum > max){
          max = sum;
+         maxIndex = i;
         }  
     }
     cout<<"maximum sum in rows is = "<<max<<endl;
+    return maxIndex;
 }
 
-void colWise(int arr[][4], int n, int m){
+int colWise(int arr[][4], int n, int m){
     int max = -1;
+    int maxIndex = 0;
     for(int j=0; j<m; j++){
         int sum = 0;
         for(int i=0; i<n; i++){
            sum += arr[i][j];
         }
-        if(sum > max)
+        if(sum > max){
           max = sum;
+          maxIndex = j;
+        }
+         
     }
      cout<<"maximum sum is in cols = "<<max<<endl;
+     return maxIndex;
 }
 
 int main(){
@@ -40,7 +48,9 @@ int main(){
        }
     }cout<<endl;
     
-    rowWise(arr, 3, 4);
-    colWise(arr, 3, 4);
+    int maxRowIndex = rowWise(arr, 3, 4);
+    int mamxColIndex = colWise(arr, 3, 4);
+    cout<<"Maximum row index = "<<maxRowIndex<<endl;
+    cout<<"Maximum col index = "<<mamxColIndex<<endl;
     return 0;
 }
