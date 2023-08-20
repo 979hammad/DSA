@@ -43,7 +43,7 @@ bool isPalindrome(string s){
     for(int i=0; i<s.length(); i++){
         temp[i] = toLowerCase(temp[i]);
     }
-
+  
     return checkPalindrome(temp);
 }
 
