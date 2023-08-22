@@ -15,5 +15,16 @@ int main(){
   cout<<"Element at 3rd memory block (arr[2]) = "<<arr[2]<<endl;
   cout<<"Element at 3rd memory block (*(arr+2)) = "<<*(arr + 2)<<endl; // first incremeting the address by 2 integers (8 bytes) then pointing to that value 
   
+  /////////////////-----pointers in array and size of------//////////////////////////////
+  int temp[10] = {1, 2};
+  cout<<" sizeof(temp) = "<<sizeof(temp)<<endl; // 4 bytes each block * 
+  cout<<" sizeof(*temp) = "<<sizeof(*temp)<<endl; // 
+  cout<<" sizeof(&temp) = "<<sizeof(&temp)<<endl;
+  
+  int *ptr = &temp[0];
+  cout<<" sizeof(ptr) = "<<sizeof(ptr)<<endl;
+  cout<<" sizeof(*ptr) = "<<sizeof(*ptr)<<endl;
+  cout<<" sizeof(&ptr) = "<<sizeof(&ptr)<<endl; 
+
     return 0;
 }
