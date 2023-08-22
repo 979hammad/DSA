@@ -25,6 +25,17 @@ int main(){
   cout<<" sizeof(ptr) = "<<sizeof(ptr)<<endl;
   cout<<" sizeof(*ptr) = "<<sizeof(*ptr)<<endl;
   cout<<" sizeof(&ptr) = "<<sizeof(&ptr)<<endl; 
+  ////////////////----------------& operator---------------//////////////////////////////
+
+  cout<<" &temp = "<<&temp<<endl;
+  cout<<" &temp[0] = "<<&temp[0]<<endl;
+  cout<<" temp = "<<temp<<endl;
+  //above all three are same
+
+  cout<<" &temp = "<<&temp<<endl;
+  cout<<" &ptr = "<<&ptr<<endl;
+  // in above two statements temp is represeting first block of adress
+  // while &ptr will display address of ptr pointer address  
 
     return 0;
 }
