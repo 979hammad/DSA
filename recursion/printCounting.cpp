@@ -12,7 +12,6 @@ void printCountingHeadRecursion(int num){
     cout<<num<<" "; //--> HEAD RECURSION --> output 5 3 2 1 
     //recursive call
     printCountingHeadRecursion( num-1 );
-
 }
 
 void printCountingTailRecursion(int num){
