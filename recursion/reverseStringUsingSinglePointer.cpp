@@ -8,9 +8,9 @@ void reverseAString(string &s, int i){
   if(i>n)
     return;
 
-  swap(s[i], s[n-i-1]);
-  i++; 
-  reverseAString(s, i);
+  swap(s[i], s[n-1-i]);
+
+  reverseAString(s, i+1);
   
 }
 
