@@ -23,7 +23,7 @@ bool binarySearch(int arr[], int k, int s, int e){
 int main(){
   
   int arr[5] = {4, 8, 10, 11, 12};
-  int key = 8;
+  int key = 80;
 
   if(binarySearch(arr, key, 0, 5)){
     cout<<"Element found "<<endl;
