@@ -27,7 +27,11 @@ int main(){
     cout<<"Enter 2nd number = ";
     cin>>b;
 
-    cout<<"GCD is = "<<gcd(a, b)<<endl;
-    
+    int hcf = gcd(a,b);
+    //folmulae
+    // lcm * hcf = a * b;
+
+    int lcm = (a * b)/hcf;
+    cout<<"LCD / LCF is = "<<lcm;
     return 0;
 }
