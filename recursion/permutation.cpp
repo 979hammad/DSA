@@ -1,5 +1,6 @@
 #include<iostream>
 #include<algorithm>
+#include<vector>
 using namespace std;
 
 void solve(vector<int> arr, int index, vector<vector<int>>& ans){
@@ -32,7 +33,14 @@ vector<vector<int>> permutation(vector<int> &arr){
 
 int main(){
   vector<int> arr = {1,2,3};
-  permutation(arr);
+  vector<vector<int>> permutations = permutation(arr);
+  
+  for(const vector<int>& perm : permutations){
+        for(int num : perm){
+            cout << num << " ";
+        }
+        cout << endl;
+    }
 
   return 0;
 }
